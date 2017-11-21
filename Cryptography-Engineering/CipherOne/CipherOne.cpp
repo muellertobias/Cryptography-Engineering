@@ -4,7 +4,6 @@
 
 namespace CipherOne
 {
-
 	int encrypt(int m, int key)
 	{
 		int k0 = key >> sizeof(int);
