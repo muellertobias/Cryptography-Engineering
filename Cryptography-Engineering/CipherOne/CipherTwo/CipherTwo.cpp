@@ -6,9 +6,9 @@ namespace CipherTwo
 {
 	int encrypt(int m, int key)
 	{
-		int k0 = getKeyOnIndex(0, key, 3);
-		int k1 = getKeyOnIndex(1, key, 3);
-		int k2 = getKeyOnIndex(2, key, 3);
+		int k0 = key >> 2 * sizeof(int); 
+		int k1 = key >> sizeof(int) & 0xf;
+		int k2 = (key & 0xf);
 
 		int u = m ^ k0;
 		int v = sBox[u];
@@ -21,9 +21,9 @@ namespace CipherTwo
 
 	int decrypt(int c, int key)
 	{
-		int k0 = getKeyOnIndex(0, key, 3);
-		int k1 = getKeyOnIndex(1, key, 3);
-		int k2 = getKeyOnIndex(2, key, 3);
+		int k0 = key >> 2 * sizeof(int);
+		int k1 = key >> sizeof(int) & 0xf;
+		int k2 = (key & 0xf);
 
 		int x = c ^ k2;
 		int w = invSBox(x);

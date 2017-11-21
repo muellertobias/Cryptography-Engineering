@@ -144,7 +144,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CipherOne.h" />
-    <ClInclude Include="CipherThree.h" />
     <ClInclude Include="CipherTwo.h" />
     <ClInclude Include="List.h" />
     <ClInclude Include="stdafx.h" />
