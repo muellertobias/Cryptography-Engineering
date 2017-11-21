@@ -4,5 +4,7 @@
 
 int sBox[];
 int invSBox(int value);
+int getKeyOnIndex(int index, int key, int n);
+
 
 #endif // !SUBSTITUTIONBOX_H
